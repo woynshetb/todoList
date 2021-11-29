@@ -36,18 +36,23 @@ class _TasksScreenState extends State<TasksScreen> {
                 child: Text(
                   "To-do",
                   style: TextStyle(
+                      fontFamily: "Kiros",
                       color: Colors.white,
                       fontSize: 50,
                       fontWeight: FontWeight.w700),
                 ),
               ),
               Text(
-                "nuber of Task you want to accomplish \n",
-                style: TextStyle(color: Colors.white),
+                "Today you want to accomplish\n",
+                style: TextStyle(
+                    fontSize: 20, fontFamily: "Chiret", color: Colors.white),
               ),
               Text(
-                "  ${Provider.of<TaskData>(context).listCount}",
-                style: TextStyle(color: Colors.white),
+                "  ${Provider.of<TaskData>(context).listCount} Tasks",
+                style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 30,
+                    fontWeight: FontWeight.w700),
               ),
               SizedBox(
                 height: 50,
