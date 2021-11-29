@@ -15,9 +15,9 @@ class _TasksScreenState extends State<TasksScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.teal,
+      backgroundColor: Colors.brown,
       floatingActionButton: FloatingActionButton(
-        backgroundColor: Colors.teal,
+        backgroundColor: Color(0xffe4cda5),
         child: Icon(Icons.add),
         onPressed: () {
           showModalBottomSheet(
@@ -28,33 +28,29 @@ class _TasksScreenState extends State<TasksScreen> {
         Container(
           padding: EdgeInsets.only(top: 60, left: 30, right: 30, bottom: 30),
           child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              CircleAvatar(
-                radius: 30,
-                backgroundColor: Colors.white,
-                child: Icon(
-                  Icons.list,
-                  color: Colors.teal,
-                  size: 30,
+              SizedBox(
+                height: 50,
+              ),
+              Center(
+                child: Text(
+                  "To-do",
+                  style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 50,
+                      fontWeight: FontWeight.w700),
                 ),
               ),
-              SizedBox(
-                height: 10,
+              Text(
+                "nuber of Task you want to accomplish \n",
+                style: TextStyle(color: Colors.white),
               ),
               Text(
-                "To do list",
-                style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 50,
-                    fontWeight: FontWeight.w700),
-              ),
-              Text(
-                "${Provider.of<TaskData>(context).listCount}",
+                "  ${Provider.of<TaskData>(context).listCount}",
                 style: TextStyle(color: Colors.white),
               ),
               SizedBox(
-                height: 30,
+                height: 50,
               ),
             ],
           ),
@@ -70,6 +66,15 @@ class _TasksScreenState extends State<TasksScreen> {
                 )),
             child: TasksList(),
           ),
+        ),
+        Container(
+          height: 100,
+          decoration: BoxDecoration(color: Colors.brown),
+          child: Center(
+              child: Text(
+            "Good luck ",
+            style: TextStyle(color: Colors.white, fontSize: 20),
+          )),
         ),
       ]),
     );

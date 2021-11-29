@@ -31,9 +31,14 @@ class _AddTaskScreenState extends State<AddTaskScreen> {
             Text(
               "New Task",
               textAlign: TextAlign.center,
-              style: TextStyle(fontSize: 30, color: Colors.teal),
+              style: TextStyle(fontSize: 30, color: Colors.brown),
             ),
             TextField(
+              decoration: InputDecoration(
+                border: InputBorder.none,
+                focusedBorder: InputBorder.none,
+                enabledBorder: InputBorder.none,
+              ),
               autofocus: true,
               textAlign: TextAlign.center,
               onChanged: (newText) {
@@ -42,7 +47,7 @@ class _AddTaskScreenState extends State<AddTaskScreen> {
             ),
             Consumer<TaskData>(builder: (context, task, child) {
               return FlatButton(
-                  color: Colors.teal,
+                  color: Colors.brown,
                   onPressed: () {
                     task.addTask(text);
                     print(text);
